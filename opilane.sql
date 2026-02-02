@@ -21,4 +21,12 @@ INSERT INTO opilane(eesnimi, perenimi, synniaeg, kas_opib)
 VALUES ('Nikita', 'Petrov', '2023-12-12', 0),
 ('Nikita', 'Alekseev', '2020-11-12', 0),
 ('Nikita', 'Nikitin', '2021-12-13', 0);
+
+Select * from opilane;
+
+--ühe kirje kustutamine
+DELETE FROM opilane WHERE opilaneID=5;
+--kirje uuendamine
+Select * from opilane;
+UPDATE opilane SET aadress='Tallinn'
 Select * from opilane;
