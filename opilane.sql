@@ -5,8 +5,20 @@ use NikitaGSQL;
 CREATE TABLE opilane(
 opilaneID int PRIMARY KEY identity(1,1),
 eesnimi varchar(25),
-perenimi varchar(30) NOT null,
+perenimi varchar(30) NOT null UNIQUE,
 synniaeg date,
 aadress TEXT,
 kas_opib bit);
+--kuvab tabeli, * - kõik väljad
 SELECT * FROM opilane;
+
+--tabeli kustutamine
+DROP TABLE opilane;
+
+--andmete lisamine tabelisse opilane 
+--lisamine 3. kirjet korraga
+INSERT INTO opilane(eesnimi, perenimi, synniaeg, kas_opib)
+VALUES ('Nikita', 'Petrov', '2023-12-12', 0),
+('Nikita', 'Alekseev', '2020-11-12', 0),
+('Nikita', 'Nikitin', '2021-12-13', 0);
+Select * from opilane;
